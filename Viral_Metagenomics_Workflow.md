@@ -32,3 +32,11 @@ One we have the VIBRANT results, we want to run CheckV to assess quality on that
 To run CheckV:
 `/slowdata/data2/Lake_Mendota_Patricia/Virus_workflow$ /home/kieft/anaconda3/bin/checkv end_to_end /slowdata/data2/Lake_Mendota_Patricia/Virus_workflow/VIBRANT/VIBRANT_3300020480.a/VIBRANT_phages_3300020480.a/3300020480.a.phages_combined.fna CheckV/ -t 10`
 
+## Dereplication
+
+
+# Additional Analyses
+## Taxonomy
+
+## Coverage across time
+
