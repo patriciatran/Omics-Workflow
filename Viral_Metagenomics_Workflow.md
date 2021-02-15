@@ -10,6 +10,7 @@ For this tutorial, I'm using a MG from Lake Mendota's time series:
 `/slowdata/data2/Lake_Mendota_Patricia/Virus_workflow/Assembly/3300020480.a.fna`
 
 ## Phage annotations
+Run [VIBRANT](https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-020-00867-0)
 
 General command:
 `/slowdata/data4/VIBRANT/VIBRANT_v1.2.1/VIBRANT_run.py -i assembly.fasta -t threads -folder output_folder`
@@ -27,7 +28,7 @@ the identified phages are here: `3300020480.a.phages_combined.fna` which should 
 
 ## Quality Checking
 
-One we have the VIBRANT results, we want to run CheckV to assess quality on that file : 3300020480.a.phages_combined.fna
+One we have the VIBRANT results, we want to run [CheckV](https://bitbucket.org/berkeleylab/CheckV) to assess quality on that file : 3300020480.a.phages_combined.fna
 -d /slowdata/data4/checkv-db-v0.6/
 To run CheckV:
 `/home/kieft/anaconda3/bin/checkv end_to_end  /slowdata/data2/Lake_Mendota_Patricia/Virus_workflow/VIBRANT/VIBRANT_3300020480.a/VIBRANT_phages_3300020480.a/3300020480.a.phages_combined.fna CheckV/ -t 10 -d /slowdata/data4/checkv-db-v0.6/`
