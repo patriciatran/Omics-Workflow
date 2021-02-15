@@ -28,9 +28,11 @@ the identified phages are here: `3300020480.a.phages_combined.fna` which should 
 ## Quality Checking
 
 One we have the VIBRANT results, we want to run CheckV to assess quality on that file : 3300020480.a.phages_combined.fna
-
+-d /slowdata/data4/checkv-db-v0.6/
 To run CheckV:
-`/slowdata/data2/Lake_Mendota_Patricia/Virus_workflow$ /home/kieft/anaconda3/bin/checkv end_to_end /slowdata/data2/Lake_Mendota_Patricia/Virus_workflow/VIBRANT/VIBRANT_3300020480.a/VIBRANT_phages_3300020480.a/3300020480.a.phages_combined.fna CheckV/ -t 10`
+`/home/kieft/anaconda3/bin/checkv end_to_end  /slowdata/data2/Lake_Mendota_Patricia/Virus_workflow/VIBRANT/VIBRANT_3300020480.a/VIBRANT_phages_3300020480.a/3300020480.a.phages_combined.fna CheckV/ -t 10 -d /slowdata/data4/checkv-db-v0.6/`
+
+(make sure you have the permissions set up to access the `checkv-db-v0.6` folder
 
 ## Dereplication
 
