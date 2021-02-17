@@ -1,4 +1,4 @@
-## Metagenomic Workflow
+## Bacterial/Archaeal Metagenome-assembled genomes Metagenomic Workflow
 
 The following document shows the general steps of a metagenomics project. In this tutorial, we will go fom raw reads that we receive from the sequencer, to curated high-quality metagenome-assembled genomes (MAGs). I like to organize my projects by analyses for example, I'll have a folder with my raw data, then subsequent folders named after the analyses.
 
