@@ -36,6 +36,26 @@ To run CheckV:
 (make sure you have the permissions set up to access the `checkv-db-v0.6` folder
 
 ## Dereplication
+We can dereplicate scaffolds using different programs, such as [dRep](https://github.com/MrOlm/drep) or [CD-HIT](http://weizhongli-lab.org/cd-hit/). The reason why we want to replicate is that if we have many of the same scaffolds identified, this will make the mapping less accurate. A read to match to either scaffolds. To get true coverage of each scaffold, it can be recommended to replicated first.
+
+### dereplication using dRep
+outout_directory is the name of the output folder, -g is the path of the folder containing the viral fasta sequencines (that is `/slowdata/data2/Lake_Mendota_Patricia/Virus_workflow/VIBRANT/VIBRANT_3300020480.a/VIBRANT_phages_3300020480.a/3300020480.a.phages_combined.fna` in the example above), and 
+the --meta flag.
+
+`dRep dereplicate outout_directory -g path/to/genomes/*.fasta --meta`
+
+### dereplication using CD-HIT
+To cluster nucleotide sequencing, use `cd-hit-est`. Instructions [here](https://github.com/weizhongli/cdhit/wiki/3.-User's-Guide#CDHITEST)
+Since we are not working with paired reads, and that we are only working with one fasta file (rather than multiple), the general format will be:
+
+`cd-hit-est -i est_human -o est_human95 -c 0.95 -n 10 -d 20 -M 16000 -T 8`
+
+There -i is the input fasta sequence, the -o is the clustered output, -c is the sequence identity threshold (we suggest 0.97), -n is given the values 10 because -c is between 0.95 and 1.0, -d is the length of description in .clstr file (default 20, if 0 it cuts after the first space in the fasta file), -M is the memory, and -T is the number of threads. 
+
+## Mapping (getting coverage values)
+There are several methods to get abundance values (i.e. coverage, mapped reads, etc.), and several programs exist. Overall, the idea is to map the set of reads (trimmed, quality checked) against the fasta file (referred to as "database") of the scaffolds you want to get values for.
+
+
 
 
 # Additional Analyses
